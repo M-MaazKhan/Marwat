@@ -1,7 +1,9 @@
 /* =========================================
    Site Stylesheet — Header, About, Footer
    ========================================= */
-
+html{
+    scroll-behavior: smooth;
+}
 :root {
   --ink: #14181f;
   --paper: #fafaf9;
@@ -154,7 +156,7 @@ nav a:focus-visible {
 }
 
 body {
-  background: #070b18;
+  background:var(--bg);
   overflow-x: hidden;
 }
 
