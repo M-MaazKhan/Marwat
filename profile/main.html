@@ -1,145 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Header</title>
+  </head>
+  <body>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Professional Header</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <!-- Font Awesome -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
 
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-
-<header >
-    <div class="container">
-
-        <!-- Logo -->
-        <div class="logo">
-            <h2>MUHAMMAD MAAZ KHAN</h2>
-        </div>
-        <nav>
-            <ul>
+        <link rel="stylesheet" href="main.css" />
+      </head>
+      <body>
+        <header>
+          <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+              <h2>MUHAMMAD MAAZ KHAN</h2>
+            </div>
+            <nav>
+              <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<section class="skills-section" id="skills">
-    <div class="skills-heading">
-      <h2 class="title">My Skills</h2>
-      <p class="subtitle">Languages and tools I use to design, build, and ship software</p>
-    </div>
+              </ul>
+            </nav>
+          </div>
+        </header>
+       <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-container">
+            <div class="hero-text">
+              <span>Hello, I'm</span>
 
-    <div class="carousel" id="carousel">
-      <button class="nav-btn nav-prev" id="prevBtn" aria-label="Previous skill">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 4L7 12L15 20" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+              <h1>
+                Muhammad <br />
+                Maaz Khan
+              </h1>
 
-      <div class="track" id="track">
-        <!-- Cards injected by JS -->
-      </div>
+              <h3>Computer Science Student & Front-End Developer</h3>
 
-      <button class="nav-btn nav-next" id="nextBtn" aria-label="Next skill">
-        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 4L17 12L9 20" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-    </div>
+              <p>
+                I build responsive and modern websites using HTML, CSS and
+                JavaScript. I enjoy creating beautiful user interfaces and
+                learning new technologies.
+              </p>
 
-    <div class="dots" id="dots"></div>
-  </section>
-<section id="contact" class="contact">
-    <div class="container">
+              <div class="hero-buttons">
+                <a href="#" class="btn primary">Download CV</a>
+              </div>
+            </div>
 
-        <h2>Contact Me</h2>
-        <p class="contact-text">
-            Have a question or want to work together? Feel free to get in touch!
-        </p>
+            <div class="hero-image">
+              <img src="images/maaz.png" alt="Maaz" />
+            </div>
+          </div>
+        </section>
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+          <div class="skills-heading">
+            <h2 class="title">My Skills</h2>
+            <p class="subtitle">
+              Languages and tools I use to design, build, and ship software
+            </p>
+          </div>
 
-        <div class="contact-container">
+          <div class="carousel" id="carousel">
+            <button
+              class="nav-btn nav-prev"
+              id="prevBtn"
+              aria-label="Previous skill"
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path
+                  d="M15 4L7 12L15 20"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
 
-            <!-- Contact Information -->
-            <div class="contact-info">
+            <div class="track" id="track">
+              <!-- Cards injected by JS -->
+            </div>
+
+            <button
+              class="nav-btn nav-next"
+              id="nextBtn"
+              aria-label="Next skill"
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path
+                  d="M9 4L17 12L9 20"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="dots" id="dots"></div>
+        </section>
+        <section id="contact" class="contact">
+          <div class="container">
+            <h2>Contact Me</h2>
+            <p class="contact-text">
+              Have a question or want to work together? Feel free to get in
+              touch!
+            </p>
+
+            <div class="contact-container">
+              <!-- Contact Information -->
+              <div class="contact-info">
                 <h3>Get In Touch</h3>
 
                 <p><strong>Name:</strong> Muhammad Maaz Khan</p>
                 <p><strong>Email:</strong> muhammasmaazkhan420@gmail.com</p>
                 <p><strong>Phone:</strong> +92 3415986745</p>
                 <p><strong>Location:</strong> Islamabad</p>
-            </div>
+              </div>
 
-            <!-- Contact Form -->
-            <div class="contact-form">
+              <!-- Contact Form -->
+              <div class="contact-form">
                 <form action="#">
-                    <input type="text" placeholder="Your Name" required>
+                  <input type="text" placeholder="Your Name" required />
 
-                    <input type="email" placeholder="Your Email" required>
+                  <input type="email" placeholder="Your Email" required />
 
-                    <input type="text" placeholder="Subject" required>
+                  <input type="text" placeholder="Subject" required />
 
-                    <textarea rows="6" placeholder="Your Message" required></textarea>
+                  <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
 
-                    <button type="submit">Send Message</button>
+                  <button type="submit">Send Message</button>
                 </form>
+              </div>
             </div>
-
-        </div>
-    </div>
-</section>
-<section class="about" id="about">
-    <div class="about-content">
-        <span class="about-eyebrow">About Me</span>
-        <h2>Hi, I'm a Computer Science Student</h2>
-        <p>
-            I'm a motivated and hardworking student with a foundation in
-            <strong>C++</strong>, <strong>Python</strong>, and <strong>HTML</strong>.
-            I enjoy exploring new technologies and constantly sharpening my
-            programming skills, with a strong interest in software development
-            and problem-solving.
-        </p>
-        <p>
-            I'm a quick learner, responsible, and comfortable working both
-            independently and as part of a team. My goal is to gain practical
-            experience and grow my technical and professional skills toward a
-            successful career in the IT field.
-        </p>
-        <div class="about-tags">
-            <span>C++</span>
-            <span>Python</span>
-            <span>HTML</span>
-            <span>Problem Solving</span>
-            <span>Team Player</span>
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="footer-content">
-        <h3>Maaz Marwat</h3>
-        <p>Computer Science Student | Web Developer | Passionate Learner</p>
-        <div class="social-icons">
-            <a href="https://github.com/M-MaazKhan/Marwat"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/muhammad-maaz-khan-6b1386402"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
-        </div>
-        <p class="copyright">
-            © 2026 Maaz Marwat. All Rights Reserved.
-        </p>
-    </div>
-</footer>
-<script src="main.js"></script>
-</body>
+          </div>
+        </section>
+        <section class="about" id="about">
+          <div class="about-content">
+            <span class="about-eyebrow">About Me</span>
+            <h2>Hi, I'm a Computer Science Student</h2>
+            <p>
+              I'm a motivated and hardworking student with a foundation in
+              <strong>C++</strong>, <strong>Python</strong>, and
+              <strong>HTML</strong>. I enjoy exploring new technologies and
+              constantly sharpening my programming skills, with a strong
+              interest in software development and problem-solving.
+            </p>
+            <p>
+              I'm a quick learner, responsible, and comfortable working both
+              independently and as part of a team. My goal is to gain practical
+              experience and grow my technical and professional skills toward a
+              successful career in the IT field.
+            </p>
+            <div class="about-tags">
+              <span>C++</span>
+              <span>Python</span>
+              <span>HTML</span>
+              <span>Problem Solving</span>
+              <span>Team Player</span>
+            </div>
+          </div>
+        </section>
+        <footer class="footer">
+          <div class="footer-content">
+            <h3>Maaz Marwat</h3>
+            <p>Computer Science Student | Web Developer | Passionate Learner</p>
+            <div class="social-icons">
+              <a href="https://github.com/M-MaazKhan/Marwat"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/muhammad-maaz-khan-6b1386402"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="mailto:your@email.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </div>
+            <p class="copyright">© 2026 Maaz Marwat. All Rights Reserved.</p>
+          </div>
+        </footer>
+        <script src="main.js"></script>
+      </body>
+    </html>
+  </body>
 </html>
