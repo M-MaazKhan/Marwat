@@ -33,10 +33,33 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
             </ul>
         </nav>
     </div>
 </header>
+<section class="skills-section" id="skills">
+    <div class="skills-heading">
+      <h2 class="title">My Skills</h2>
+      <p class="subtitle">Languages and tools I use to design, build, and ship software</p>
+    </div>
+
+    <div class="carousel" id="carousel">
+      <button class="nav-btn nav-prev" id="prevBtn" aria-label="Previous skill">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15 4L7 12L15 20" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="track" id="track">
+        <!-- Cards injected by JS -->
+      </div>
+
+      <button class="nav-btn nav-next" id="nextBtn" aria-label="Next skill">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M9 4L17 12L9 20" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="dots" id="dots"></div>
+  </section>
 <section id="contact" class="contact">
     <div class="container">
 
@@ -73,7 +96,6 @@
             </div>
 
         </div>
-
     </div>
 </section>
 <section class="about" id="about">
@@ -104,10 +126,8 @@
 </section>
 <footer class="footer">
     <div class="footer-content">
-
         <h3>Maaz Marwat</h3>
         <p>Computer Science Student | Web Developer | Passionate Learner</p>
-
         <div class="social-icons">
             <a href="https://github.com/M-MaazKhan/Marwat"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/muhammad-maaz-khan-6b1386402"><i class="fab fa-linkedin-in"></i></a>
@@ -115,12 +135,11 @@
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
         </div>
-
         <p class="copyright">
             © 2026 Maaz Marwat. All Rights Reserved.
         </p>
-
     </div>
 </footer>
+<script src="main.js"></script>
 </body>
 </html>

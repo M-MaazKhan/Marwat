@@ -140,6 +140,275 @@ nav a:focus-visible {
     font-size: 0.82rem;
   }
 }
+/* ==========================================================================
+   Tokens
+   ========================================================================== */
+:root {
+  --bg: #eef1f8;
+  --ink: #172142;
+  --muted: #6b7280;
+  --accent: #ff6b35;
+  --card-bg: #ffffff;
+  --card-shadow: 0 30px 60px -20px rgba(23, 33, 66, 0.35);
+  --side-shadow: 0 20px 40px -18px rgba(23, 33, 66, 0.28);
+  --font-display: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: var(--font-body);
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   Section shell
+   ========================================================================== */
+.skills-section {
+  padding: 90px 20px 100px;
+  overflow: hidden;
+}
+
+.skills-heading {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 64px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: var(--font-body);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 18px 0;
+  color:var(--color-accent);
+}
+
+.subtitle {
+  font-family: var(--font-display);
+  font-size: 30px;
+  color: var(--color-heading);
+  max-width: 640px;
+  margin: 0 auto 25px auto;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   Carousel shell
+   ========================================================================== */
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  perspective: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Card
+   ========================================================================== */
+.card {
+  position: absolute;
+  width: 260px;
+  height: 340px;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #d7dbe4 0%, #b9bfcb 100%);
+  box-shadow: var(--side-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 34px 24px 26px;
+  cursor: pointer;
+  transition: transform 0.55s cubic-bezier(.22,.68,0,1.01),
+              opacity 0.55s cubic-bezier(.22,.68,0,1.01),
+              box-shadow 0.55s ease;
+  will-change: transform, opacity;
+}
+
+.card.is-active {
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  cursor: default;
+}
+
+.card-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--ink);
+  margin: 4px 0 22px;
+  letter-spacing: -0.01em;
+}
+
+/* -- progress ring -------------------------------------------------------- */
+.ring {
+  --pct: 0;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: conic-gradient(var(--ring-color, var(--accent)) calc(var(--pct) * 1%), rgba(23,33,66,0.08) 0);
+  margin-bottom: 22px;
+  transition: opacity 0.4s ease;
+}
+
+.card:not(.is-active) .ring {
+  background: conic-gradient(rgba(255,255,255,0.55) calc(var(--pct) * 1%), rgba(255,255,255,0.18) 0);
+}
+
+.ring-inner {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:not(.is-active) .ring-inner {
+  background: #c3c8d3;
+}
+
+.icon { width: 48px; height: 48px; }
+
+/* -- footer row: percent + stars ------------------------------------------ */
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.percent {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.card:not(.is-active) .percent { color: #2b3350; }
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: rgba(23,33,66,0.15);
+}
+
+.stars { display: flex; gap: 3px; }
+
+.stars svg { width: 15px; height: 15px; }
+
+.star-filled path { fill: var(--ring-color, var(--accent)); }
+.star-empty path { fill: rgba(23,33,66,0.16); }
+
+.card:not(.is-active) .star-empty path { fill: rgba(255,255,255,0.35); }
+.card:not(.is-active) .star-filled path { fill: rgba(255,255,255,0.9); }
+
+/* ==========================================================================
+   Nav buttons
+   ========================================================================== */
+.nav-btn {
+  position: relative;
+  z-index: 20;
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--card-bg);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 12px 26px -10px rgba(23,33,66,0.35);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.nav-btn:active { transform: translateY(0); }
+
+.nav-prev { margin-right: 8px; }
+.nav-next { margin-left: 8px; }
+
+/* ==========================================================================
+   Dots
+   ========================================================================== */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 46px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(23,33,66,0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease, width 0.25s ease;
+}
+
+.dot.is-active {
+  background: var(--accent);
+  width: 22px;
+  border-radius: 5px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 640px) {
+  .track { height: 320px; }
+  .card { width: 210px; height: 300px; padding: 26px 18px 20px; }
+  .ring { width: 96px; height: 96px; }
+  .ring-inner { width: 74px; height: 74px; }
+  .icon { width: 38px; height: 38px; }
+  .nav-btn { width: 38px; height: 38px; }
+  .card-name { font-size: 19px; margin-bottom: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { transition: none; }
+}
 /* =========================================================
    Contact Section — Stylesheet
    (styled to match the "About Me" page aesthetic:
@@ -167,7 +436,7 @@ nav a:focus-visible {
 
 /* ---------- Contact ---------- */
 .contact {
-  background: var(--color-bg);
+  background: var(--bg);;
   padding: 50px 20px;
 }
 
