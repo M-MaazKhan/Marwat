@@ -168,7 +168,7 @@ nav a:focus-visible {
 /* ---------- Contact ---------- */
 .contact {
   background: var(--color-bg);
-  padding: 100px 20px;
+  padding: 50px 20px;
 }
 
 .contact .container {
@@ -193,7 +193,7 @@ nav a:focus-visible {
   font-size: 30px;
   color: var(--color-heading);
   max-width: 640px;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 25px auto;
   line-height: 1.4;
 }
 
@@ -210,7 +210,7 @@ nav a:focus-visible {
   background: var(--color-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  padding: 40px 34px;
+  padding: 50px 34px;
   box-shadow: 0 4px 18px var(--color-shadow);
 }
 
