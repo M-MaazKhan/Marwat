@@ -145,6 +145,59 @@ nav a:focus-visible {
     font-size: 0.82rem;
   }
 }
+/* Theme Toggle */
+
+.theme-toggle{
+    width:75px;
+    height:38px;
+    background:#222;
+    border-radius:50px;
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 10px;
+    transition:.4s;
+}
+
+.theme-toggle i{
+    font-size:16px;
+    z-index:2;
+}
+
+.fa-sun{
+    color:#ffd43b;
+}
+
+.fa-moon{
+    color:#ffffff;
+}
+
+.toggle-circle{
+    position:absolute;
+    left:4px;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:50%;
+    transition:.4s;
+}
+
+/* Light Mode */
+
+body.light-mode{
+    background:#f8f9fa;
+    color:#111;
+}
+
+body.light-mode .theme-toggle{
+    background:#dcdcdc;
+}
+
+body.light-mode .toggle-circle{
+    transform:translateX(37px);
+}
 /*=========================================================================
    hero section
    ========================================================================== */
@@ -261,7 +314,7 @@ body {
 .hero-image img {
   width: 510px;
   max-width: 400%;
-height: 565px;;
+height: 564px;;
   border-radius: 25px;
 
   border: 1px solid #e5e6eb;
@@ -1072,3 +1125,4 @@ body {
     font-size: 0.85rem;
   }
 }
+/* appearance */
