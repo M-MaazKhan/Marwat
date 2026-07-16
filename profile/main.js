@@ -4,6 +4,43 @@ const toggle = document.getElementById("themeToggle");
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
 });
+// animation statistics
+const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+const CIRC = 326.7;
+
+function animateBox(box){
+    const target = +box.getAttribute('data-target');
+    const numEl = box.querySelector('.counter');
+    const ring = box.querySelector('.ring-fill');
+    const duration = 1600;
+    const start = performance.now();
+
+    function tick(now){
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = easeOutExpo(progress);
+        numEl.textContent = Math.round(eased * target);
+        if(ring) ring.style.strokeDashoffset = CIRC - eased * CIRC;
+        if(progress < 1) requestAnimationFrame(tick);
+        else {
+            numEl.textContent = target;
+            if(ring) ring.style.strokeDashoffset = 0;
+        }
+    }
+    requestAnimationFrame(tick);
+}
+
+const boxes = document.querySelectorAll('.stat-box');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            animateBox(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.4 });
+
+boxes.forEach(box => observer.observe(box));
 /* ==========================================================================
    Skill data
    ========================================================================== */
